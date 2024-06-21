@@ -12,7 +12,7 @@ const Profile = ()=>{
     const handleDeleteUser = async ()=>{
         // dispatch(deleteHistory(auth.userId));
         try{
-            await axios.delete(`${window.location.origin}/api/users/zengpt/delete/account/${auth.userId}`)
+            await axios.delete(`https://zengpt-api.vercel.app/api/users/zengpt/delete/account/${auth.userId}`)
             auth.logout()      
         }
         catch(err){

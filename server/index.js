@@ -12,7 +12,7 @@ import { fileURLToPath } from 'url';
 const app = express();
 
 app.use(cors({
-    origin: ["https://deploy-mern-1whq.vercel.app"],
+    origin: [""],
     methods: ["POST", "GET", "PUT", "DELETE"],
     credentials: true
 }))
@@ -30,9 +30,6 @@ app.use('/api/users',router);
 
 // Serve static files from the React frontend app
 // app.use(express.static(path.resolve(__dirname, "client", "build")));
-app.get("/", (req, res) => {
-    res.json("Hello");
-})
 // API routes
 app.use('/api/users', router);
 

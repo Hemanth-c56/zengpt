@@ -64,7 +64,7 @@ function AuthPage() {
     if(!signup){
       //logic for login
       try{
-        const res = await axios.post(`${window.location.origin}/api/users/zengpt/login`, {
+        const res = await axios.post(`https://zengpt-api.vercel.app/api/users/zengpt/login`, {
           email: formState.inputs.email.value,
           password: formState.inputs.password.value,
         })
@@ -78,7 +78,7 @@ function AuthPage() {
     else{
       //logic for signup
       try{
-        const res = await axios.post(`${window.location.origin}/api/users/zengpt/signup`, {
+        const res = await axios.post(`https://zengpt-api.vercel.app/api/users/zengpt/signup`, {
           name: formState.inputs.name.value,
           email: formState.inputs.email.value,
           password: formState.inputs.password.value,
