@@ -25,19 +25,21 @@ Connection();
 
 app.use('/api/users',router);
 
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
+// const __filename = fileURLToPath(import.meta.url);
+// const __dirname = path.dirname(__filename);
 
 // Serve static files from the React frontend app
-app.use(express.static(path.resolve(__dirname, "client", "build")));
-
+// app.use(express.static(path.resolve(__dirname, "client", "build")));
+app.get("/", (req, res) => {
+    res.json("Hello");
+})
 // API routes
 app.use('/api/users', router);
 
 // Catch-all route to serve the React frontend
-app.get('*', (req, res) => {
-    res.sendFile(path.resolve(__dirname, 'client', 'build', 'index.html'));
-});
+// app.get('*', (req, res) => {
+//     res.sendFile(path.resolve(__dirname, 'client', 'build', 'index.html'));
+// });
 
 app.use((req,res,next)=>{
     const error = new HttpError("Could not find this route", 404);
