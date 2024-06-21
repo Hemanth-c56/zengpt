@@ -1,0 +1,117 @@
+.authCon{
+    /* border: 1px solid white; */
+    min-height: 60vh;
+    margin: 0px 50px;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.authDiv{
+    height: auto;
+    width: 500px;
+    border: 1px solid gold;
+    margin: 0px auto;
+    border-radius: 20px;
+    background: white;
+    padding: 1rem;
+}
+.login-text{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    padding: 20px;
+    font-weight: 500;
+}
+.blc{
+    color: black;
+}
+.flx{
+    display: flex;
+    gap: 10px;
+}
+.auth-form{
+    /* border: 1px solid black; */
+    width: 100%;
+    margin: 40px 0px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    gap: 2.5rem;
+}
+
+.auth-child{
+    /* border-bottom: 1px solid black; */
+    width: 100%;
+    padding: 7px 0px;
+}
+.auth-child label{
+    font-size: 1.2rem;
+    color: #B6B6B6;
+}
+.auth-child input{
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: 1px solid black; 
+    outline: none;
+    font-size: 1.2rem;
+    width: 100%;
+    color: #001B40;
+}
+.auth-submit{
+    /* border: 1px solid black; */
+    margin: 0px 40px;
+    display: flex;
+    flex-direction: column;
+}
+.auth-submit button{
+    width: fit-content;
+    margin: auto;
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: none;
+    font-size: 1.2rem;
+    font-weight: 500;
+    background-color: #001B40;
+    color: white;
+    cursor: pointer;
+}
+.auth-submit div{
+    color: black;
+    margin: 15px auto;
+}
+.auth-submit div span{
+    color: blue;
+    cursor: pointer;
+}
+
+.red{
+    color: red;
+}
+
+.triggerError{
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+    padding: 5px;
+    border: 2px solid red;
+}
+
+@media (max-width: 632px){
+    .authDiv{
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px){
+    .authCon{
+        margin: 0px 5px;
+        padding: 5px;
+    }
+}

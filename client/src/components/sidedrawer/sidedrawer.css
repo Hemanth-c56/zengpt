@@ -1,0 +1,25 @@
+.drawer-div{
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 90;
+    height: 100vh;
+    width: 70%;
+    background: black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5rem;
+}
+
+.side-drawer-h1{
+    border-bottom: 1px solid white;
+}
+
+@media (max-width: 500px){
+    .nav-elements{
+        display: flex;
+        flex-direction: column;
+    }
+}

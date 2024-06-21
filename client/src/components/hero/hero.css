@@ -1,0 +1,116 @@
+.hero{
+    /* border: 1px solid white; */
+    margin: 0px 50px;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.hero-title h1{
+    /* border: 1px solid yellow; */
+    width: fit-content;
+    margin: 0px auto;
+    background: linear-gradient(90deg, rgba(212,169,152,1) 0%, rgba(200,111,100,1) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 6rem;
+    font-weight:600;
+}
+
+.introduction{
+    /* border: 1px solid white; */
+    width: fit-content;
+    margin: 0px auto;
+    display: flex;
+    align-items: center;
+}
+
+.introduction img{
+    width: 3rem;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.introduction h1{
+    font-weight: 300;
+}
+
+.globe-3d{
+    /* border: 1px solid white; */
+    margin: 0px auto;
+}
+
+.chatbot-entry{
+    margin: 0px auto;
+}
+
+.openbtn{
+    color: white;
+    background: none;
+    outline: none;
+    padding: 1rem;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 1.5rem;
+    transition: 500ms;
+    box-shadow: 0px 0px 3px white;
+    border: none;
+}
+
+.openbtn:hover{
+    color: black;
+    background-color: white
+}
+
+.openbtn:active{
+    transform: scale(0.8);
+}
+
+.chatbot-section iframe{
+    height: 85%;
+    border: none;
+}
+
+@media (max-width: 705px){
+
+    .hero{
+        margin: 0px;
+    }
+
+    .hero-title h1{
+        font-size: 5rem;
+    }
+
+    .introduction h1{
+        font-size: 1.7rem;
+    }
+}
+
+@media (max-width: 520px){
+    .hero-title h1{
+        font-size: 4rem;
+    }
+    .introduction h1{
+        font-size: 1.5rem;
+    }
+}
+
+@media (max-width: 420px){
+    .hero{
+        padding: 0px;
+    }
+    .hero-title h1{
+        font-size: 3.3rem;
+    }
+    .introduction h1{
+        font-size: 1.3rem;
+    }
+    .openbtn{
+        font-size: 1.3rem;
+    }
+    .webgl{
+        height: 250px;
+        width: 250px;
+    }
+}

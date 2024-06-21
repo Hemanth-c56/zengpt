@@ -1,0 +1,67 @@
+.adjust-about-container{
+    /* border: 1px solid white; */
+    padding: 1rem;
+}
+.about-container{
+    /* border: 1px solid white; */
+    max-width: 1000px;
+    margin: 0px auto;
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    padding: 1rem;
+}
+
+.matter-div{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.title{
+    display: flex;
+    gap: 1rem;
+}
+
+.title img{
+    width: 2rem;
+}
+
+.description{
+    /* border: 1px solid white; */
+    line-height: 1.4;
+    box-shadow: 0px 0px 5px white;
+    border-radius: 20px;
+    padding: 0.5rem;
+    background-color: #020a3e;
+    background-image: url("https://www.transparenttextures.com/patterns/subtle-dots.png");
+    font-size: 1.1rem;
+}
+
+.matter-div-0,.matter-div-2{
+    animation-name: LeftToRight;
+    animation-duration: 500ms;
+}
+
+.matter-div-1{
+    animation-name: RightToLeft;
+    animation-duration: 500ms;
+}
+
+@keyframes LeftToRight {
+    0%{
+        transform: translateX(-30%);
+    }
+    100%{
+        transform: translateX(0%);
+    }
+}
+
+@keyframes RightToLeft {
+    0%{
+        transform: translateX(30%);
+    }
+    100%{
+        transform: translateX(0%);
+    }  
+}
