@@ -12,7 +12,7 @@ import { fileURLToPath } from 'url';
 const app = express();
 
 app.use(cors({
-    origin: ["https://zengpt-client.vercel.app"],
+    origin: ["https://hermits-zen.netlify.app"],
     methods: ["POST", "GET", "PUT", "DELETE"],
     credentials: true
 }))
