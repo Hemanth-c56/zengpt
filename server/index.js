@@ -23,7 +23,7 @@ Connection();
 
 app.get('/', (req,res)=>{
     res.send("hello user");
-}
+});
         
 app.use('/api/users',router);
 
