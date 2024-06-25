@@ -6,8 +6,6 @@ import cors from "cors"
 import Connection from "./db/db.js"
 import router from "./routes/userRoutes.js";
 import HttpError from "./models/httpError.js";
-import path from "path";
-import { fileURLToPath } from 'url';
 
 const app = express();
 
@@ -23,20 +21,11 @@ app.use(bodyParser.urlencoded({extended: true}))
 
 Connection();
 
+app.get('/', (req,res)=>{
+    res.send("hello user");
+}
+        
 app.use('/api/users',router);
-
-// const __filename = fileURLToPath(import.meta.url);
-// const __dirname = path.dirname(__filename);
-
-// Serve static files from the React frontend app
-// app.use(express.static(path.resolve(__dirname, "client", "build")));
-// API routes
-app.use('/api/users', router);
-
-// Catch-all route to serve the React frontend
-// app.get('*', (req, res) => {
-//     res.sendFile(path.resolve(__dirname, 'client', 'build', 'index.html'));
-// });
 
 app.use((req,res,next)=>{
     const error = new HttpError("Could not find this route", 404);
