@@ -86,6 +86,26 @@ const GetHistoryById = async(req,res,next)=>{
     }
 }
 
+const GetUserDetails = async(req,res,next)=>{
+    try{
+        const {id} = req.params;
+
+        const user = await User.findById(id);
+        const userDetails = {
+            name: user.name,
+            email: user.email
+        }
+
+        res.status(200).json({
+            userDetails
+        })
+    }
+    catch(err){
+        const error = new HttpError("fetching user details failed", 500);
+        return next(error);
+    }
+}
+
 const UpdateHistoryById = async(req,res,next)=>{
     try{
         const {id} = req.params;
@@ -127,4 +147,4 @@ const deleteUser = async(req,res,next)=>{
     }
 }
 
-export {signup, login, GetHistoryById, UpdateHistoryById, deleteUser}
+export {signup, login, GetHistoryById, UpdateHistoryById, deleteUser, GetUserDetails}
