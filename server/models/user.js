@@ -19,9 +19,7 @@ const userSchema = new mongoose.Schema({
     history:[{
         type: String,
     }]
-}, {
-    timestamps: true;
-});
+})
 
 const User = mongoose.model('User', userSchema);
 
