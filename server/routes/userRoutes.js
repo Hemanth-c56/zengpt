@@ -1,5 +1,5 @@
 import express from 'express'
-import {GetHistoryById, UpdateHistoryById, login, signup, deleteUser} from "../controllers/userController.js"
+import {GetHistoryById, UpdateHistoryById, login, signup, deleteUser, GetUserDetails} from "../controllers/userController.js"
 import {check} from "express-validator"
 
 const router = express.Router();
@@ -20,6 +20,8 @@ router.post('/zengpt/login',
 router.delete('/zengpt/delete/account/:id', deleteUser);
 
 router.get('/zengpt/:id', GetHistoryById);
+
+router.get('/zengpt/user/details/:id', GetUserDetails);
 
 router.put('/zengpt/:id', UpdateHistoryById)
 
