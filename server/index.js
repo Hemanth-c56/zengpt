@@ -10,7 +10,7 @@ import HttpError from "./models/httpError.js";
 const app = express();
 
 app.use(cors({
-    origin: ["https://hermits-zen.netlify.app"],
+    origin: ["https://hermits-zen.netlify.app", "http://localhost:3000"],
     methods: ["POST", "GET", "PUT", "DELETE"],
     credentials: true
 }))
